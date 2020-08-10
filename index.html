@@ -6,7 +6,6 @@
     <title>Video</title>
 
     <link href="https://vjs.zencdn.net/7.8.4/video-js.css" rel="stylesheet" />
-    <link rel="stylesheet" href="/path/to/mediaelementplayer.min.css" />
     <link rel="stylesheet" href="index.css">
     
         <!-- If you'd like to support IE8 (for Video.js versions prior to v7) -->
@@ -18,40 +17,14 @@
         <video
           id="my-video"
           class="video-js vjs-big-play-centered"
-          controls
-          preload="auto"
           width="640"
           height="264"
-          poster="./earth.jpg"
-          data-setup='{}'
+          aspectRatio="9:16"
+          data-setup='{"controlBar": { "muteToggle": false}, "playbackRates": [0.5, 1, 1.5, 2],  "autoplay": true,
+          "controls": false}'
         >
           <source src="./video/test.mp4" type="video/mp4" />
         </video>
-
-        <br>
-
-        <h2>Plyr</h2>
-        <video 
-            id="player" 
-            class="player"
-            playsinline 
-            controls 
-            data-poster="./earth.jpg">
-            <source src="./video/test.mp4" type="video/mp4" />  
-          </video>
-
-
-        <br>
-
-        <h2>MediaElementPlayer</h2>
-        <video 
-        src="./video/test.mp4" 
-        width="320" 
-        height="240"
-		class="mejs__player"
-        data-mejsoptions='{"alwaysShowControls": "true"}'></video>
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.16/mediaelement.min.js"></script>
     <script src="https://vjs.zencdn.net/7.8.4/video.js"></script>
     <script src="./index.js"></script>
 </body>
