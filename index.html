@@ -8,9 +8,9 @@
     <link href="https://vjs.zencdn.net/7.8.4/video-js.css" rel="stylesheet" />
     <link rel="stylesheet" href="index.css">
     
-        <!-- If you'd like to support IE8 (for Video.js versions prior to v7) -->
-        
-        <script src="https://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
+    <!-- If you'd like to support IE8 (for Video.js versions prior to v7) -->
+    <script src="https://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
+
 </head>
 <body>
     <h2>Video.js</h2>
@@ -19,10 +19,18 @@
           class="video-js vjs-big-play-centered"
           width="640"
           height="264"
+          controls
           aspectRatio="9:16"
-          data-setup='{"controlBar": { "muteToggle": false}, "playbackRates": [0.5, 1, 1.5, 2],  "autoplay": true,
-          "controls": false}'
-        >
+          data-setup='{
+            "controlBar": {
+                "playToggle": {"replay": false},
+                "pictureInPictureToggle": false,
+                "volumePanel": false,
+                "fullscreenToggle": false,  
+                "bigPlayButton": true
+          }
+        }'>
+          
           <source src="./video/test.mp4" type="video/mp4" />
         </video>
     <script src="https://vjs.zencdn.net/7.8.4/video.js"></script>
